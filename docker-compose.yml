@@ -4,6 +4,8 @@ volumes:
 services: 
     db:
         image: postgres:9.6
+        env_file: 
+            - ./env/db.env
         volumes: 
             # Volume dos dados
             - dados:/var/lib/postgresql/data
