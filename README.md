@@ -44,3 +44,7 @@ Verifica os logs dos container pelo compose
 docker-compose logs -f -t
 ```
 
+Remover containers e images não utilizadas
+```
+docker system prune
+```
