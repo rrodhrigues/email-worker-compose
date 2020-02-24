@@ -51,10 +51,15 @@ docker system prune
 
 Acessar o container do banco e executando uma busca 
 ```
-docker-compose exec db psql -U postgres -d email_sender -c 'select * from emails'
+docker-compose exec db psql -U root -d email_sender -c 'select * from emails'
 ```
 
-Exibir um log 
+Exibir o log de um container específico
 ```
 docker-compose logs -f -t worker
+```
+
+Escalonar um container específico 
+```
+docker-compose up -d --scale worker=3
 ```
